@@ -1,4 +1,4 @@
-# Distributed Partitioned Graph Processing (Go)
+# Distributed Partitioned Graph Processing
 
 A Pregel-lite implementation for distributed graph algorithms (BFS, Connected Components) across multiple worker nodes with hash-based vertex partitioning.
 
