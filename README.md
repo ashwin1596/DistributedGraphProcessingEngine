@@ -196,7 +196,7 @@ Per-worker statistics:
 ==================================================
 ```
 
-## Fault Tolerance (Conceptual)
+## Fault Tolerance
 
 This implementation includes minimal fault tolerance:
 - Stateless coordinator (restartable)
@@ -212,15 +212,6 @@ Production systems would add:
 - **Go 1.21+** - Workers and coordinator
 - **net/rpc + JSON-RPC** - Inter-node communication (standard library)
 - **No external dependencies** - Pure Go implementation
-
-## Interview Talking Points
-
-1. **Partitioned State**: Hash-based vertex partitioning, ghost nodes
-2. **Boundary Communication**: JSON-RPC message batching between workers
-3. **Termination Detection**: Coordinator aggregates convergence signals
-4. **Superstep Model**: Pregel-style BSP execution
-5. **Concurrency**: Go channels/mutexes for thread-safe message handling
-6. **Metrics Collection**: Cross-partition ratio, message volume
 
 ## Extending to gRPC
 
